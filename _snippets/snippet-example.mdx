@@ -1,3 +1,69 @@
-## My Snippet
+using System;
 
-<Info>This is an example of a reusable snippet</Info>
+namespace CarExample
+{
+    class Car
+    {
+        // Properties for the car
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public int Mileage { get; set; }
+        public bool IsRunning { get; set; }
+
+        // Method to start the car
+        public void Start()
+        {
+            Console.WriteLine("Starting the car...");
+            IsRunning = true;
+        }
+
+        // Method to stop the car
+        public void Stop()
+        {
+            Console.WriteLine("Stopping the car...");
+            IsRunning = false;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create a new car
+            Car car = new Car
+            {
+                Make = "Ford",
+                Model = "Fusion",
+                Year = 2023,
+                Mileage = 0
+            };
+
+            // Start the car
+            car.Start();
+
+            // Check if the car is running
+            if (car.IsRunning)
+            {
+                Console.WriteLine("The car is running!");
+            }
+            else
+            {
+                Console.WriteLine("The car is not running.");
+            }
+
+            // Stop the car
+            car.Stop();
+
+            // Check if the car is running
+            if (car.IsRunning)
+            {
+                Console.WriteLine("The car is running!");
+            }
+            else
+            {
+                Console.WriteLine("The car is not running.");
+            }
+        }
+    }
+}
